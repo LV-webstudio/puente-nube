@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.svg" alt="puente-nube" width="860"></p>
+<p align="center"><img src="assets/banner.png" alt="puente-nube" width="860"></p>
 
 # puente-nube
 
