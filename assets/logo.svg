@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="lv-puente-nube">
+  <defs>
+    <linearGradient id="almagre" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C14B38"/>
+      <stop offset="1" stop-color="#7E2A1E"/>
+    </linearGradient>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3D27A"/>
+      <stop offset="0.5" stop-color="#C9A227"/>
+      <stop offset="1" stop-color="#9A7A16"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="512" height="512" rx="104" fill="url(#almagre)"/>
+  <rect width="512" height="512" rx="104" fill="url(#glass)"/>
+  <ellipse cx="180" cy="120" rx="150" ry="70" fill="#ffffff" opacity="0.10" filter="url(#blur)"/>
+
+  <!-- emblema girado: terminal <-> puente <-> nube -->
+  <g transform="rotate(-18 256 256)" filter="url(#soft)">
+    <!-- terminal (izquierda) -->
+    <rect x="96" y="214" width="104" height="84" rx="16" fill="#1c0f0c" opacity="0.72" stroke="url(#oro)" stroke-width="3"/>
+    <path d="M116 244 l20 14 -20 14" fill="none" stroke="url(#oro)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="150" y1="276" x2="178" y2="276" stroke="url(#oro)" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- nube (derecha) -->
+    <g fill="url(#glass)" stroke="url(#oro)" stroke-width="3">
+      <path d="M320 300 h92 a34 34 0 0 0 6 -67 a44 44 0 0 0 -84 -14 a30 30 0 0 0 -14 58 z"/>
+    </g>
+
+    <!-- puente: arco + tablero que une ambos -->
+    <path d="M150 300 Q256 196 362 300" fill="none" stroke="url(#oro)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="150" y1="300" x2="362" y2="300" stroke="url(#oro)" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="url(#oro)" stroke-width="4" opacity="0.9">
+      <line x1="190" y1="300" x2="190" y2="268"/>
+      <line x1="230" y1="300" x2="230" y2="242"/>
+      <line x1="256" y1="300" x2="256" y2="232"/>
+      <line x1="282" y1="300" x2="282" y2="242"/>
+      <line x1="322" y1="300" x2="322" y2="268"/>
+    </g>
+  </g>
+
+  <text x="256" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="url(#oro)" letter-spacing="6">SHANIA</text>
+  <text x="414" y="404" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="url(#oro)">™</text>
+  <text x="256" y="462" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#ffffff" opacity="0.82" letter-spacing="2">puente nube</text>
+</svg>
